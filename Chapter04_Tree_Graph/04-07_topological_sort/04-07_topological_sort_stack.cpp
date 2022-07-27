@@ -17,9 +17,7 @@ int topological_stack(vector<vector<int>>& input, vector<int>& ans, int n, vecto
     tasks.push({i, 0});
   }
   while (!tasks.empty()) {
-    auto top = tasks.top();
-    int cnode = top.first;
-    int kind = top.second;
+    auto [cnode, kind] = tasks.top();
     tasks.pop();
     if (reached[cnode]) continue;
     if (kind == 0) {
