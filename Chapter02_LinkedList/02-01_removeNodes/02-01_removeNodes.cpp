@@ -10,22 +10,22 @@ public:
     Node(int v, Node* n) : val(v), next(n) {}
 };
 Node* removeNodes(Node* node) {
-	set<int> table;
-	Node* curr = new Node(0);
+  set<int> table;
+  Node* curr = new Node(0);
     // [0]->[1]->[2]->[3]->[4]
     //  ^ans                ^ curr
     // [1]->[2]->[2]->[3]->[1]->[4]
     Node* ans = curr;
-	while (node) {
-		if (table.find(node->val) != table.end()) { // 既にある時
-		    node = node->next;
-			continue;
-		}
+  while (node) {
+    if (table.find(node->val) != table.end()) { // 既にある時
+        node = node->next;
+      continue;
+    }
         // 初めてその値が登場した時
-		table.insert(node->val);
-		curr->next = new Node(node->val);
+    table.insert(node->val);
+    curr->next = new Node(node->val);
         curr = curr->next;
-		node = node->next;
+    node = node->next;
     }
     return ans->next;
 }

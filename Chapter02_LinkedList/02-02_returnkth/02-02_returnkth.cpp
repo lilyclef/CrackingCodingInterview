@@ -12,13 +12,13 @@ public:
 Node* ans;
 // headはnullptrは入ってこない
 int returnKth(Node* head, int k) {
-	if (!head->next) {
-		if (k == 0) ans = head;
-		return 0;
-	}
-	int num = returnKth(head->next, k);
-	if (num + 1 == k) ans = head;
-	return num + 1;
+  if (!head->next) {
+    if (k == 0) ans = head;
+    return 0;
+  }
+  int num = returnKth(head->next, k);
+  if (num + 1 == k) ans = head;
+  return num + 1;
 }
 
 int returnKth2(Node* head, int k) {
