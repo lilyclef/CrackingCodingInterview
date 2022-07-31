@@ -4,11 +4,11 @@ int main () {
     std::string s;
     std::cin >> s;
     for(int i = 0;  i < s.length() - 1; i++){
-		for(int j = i+1; j < s.length(); j++){
-			if (s[i] == s[j]) {
+    for(int j = i+1; j < s.length(); j++){
+      if (s[i] == s[j]) {
                 std::cout << "T" << std::endl;
-				return true;
-			}
+        return true;
+      }
         }
     }
     std::cout << "F" << std::endl;

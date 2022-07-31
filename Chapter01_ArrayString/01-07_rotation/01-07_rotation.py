@@ -5,6 +5,6 @@ ans = []
 for i in range(0, 4):
     ans2 = []
     for j in range(0,4): 
-        ans2.append(target[4-j-1][i])	
+        ans2.append(target[4-j-1][i])
     ans.append(ans2)
 print(ans)
