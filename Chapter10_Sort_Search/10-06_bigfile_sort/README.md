@@ -1,0 +1,1 @@
+$ split -d -a 1 -b 1M data.txt split_data
