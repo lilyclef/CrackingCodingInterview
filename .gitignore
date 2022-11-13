@@ -4,3 +4,5 @@ Interview/
 Other/
 data/
 data.txt
+target/
+Cargo.lock
